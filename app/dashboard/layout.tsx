@@ -1,12 +1,15 @@
 import Header from "./_components/Header";
-import SideBar from "./_components/Sidebar";
+import Sidebar from "./_components/_Sidebar/Sidebar";
 
 export default function LayoutDashboard({ children }: Readonly<{ children: React.ReactNode }>) {
     return(
         <div className= "w-screen h-screen bg-yellow-50">
             <Header />
-            <SideBar />
-            {children}
+            <div className="flex flex-row items-center">
+                <Sidebar />
+                {children}
+            </div>
+
         </div>
     )
 }
